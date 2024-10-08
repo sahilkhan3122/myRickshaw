@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blackOpacity60">#99000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blackEdt">#1F1F1F</color>
+    <color name="blackEdt60">#1F1F1F</color>
+    <color name="textColor">#1F1F1F</color>
+    <color name="gray">#EBEBEB</color>
+    <color name="grayOpacity60">#99EBEBEB</color>
+    <color name="btnColor">#F2BE53</color>
+    <color name="yellow">#F2BE53</color>
+    <color name="subText">#991F1F1F</color>
+    <color name="lightYellow">#FEF9ED</color>
+    <color name="lightYellowEdt">#E7C471</color>
+    <color name="transparent">#00000000</color>
+    <color name="grayDark">#1F1F1F</color>
+    <color name="grayDark40">#1F1F1F</color>
+    <color name="grayDark60">#991F1F1F</color>
+    <color name="whiteGray">#DEDEDE</color>
+    <color name="whiteGray60">#99DEDEDE</color>
+    <color name="lightPink">#FCECEC</color>
+    <color name="gradientProfile">#795F2A</color>
+    <color name="green">#008000</color>
+    <color name="red">#E62E2E</color>
+    <color name="grayLight">#878787</color>
+</resources>

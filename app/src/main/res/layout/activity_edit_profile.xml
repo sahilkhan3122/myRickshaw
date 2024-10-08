@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.myrickshawparent.ui.profile.EditProfileViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_bg_gradient"
+            tools:context=".ui.profile.EditProfileActivity">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/header_with_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewProfile"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginVertical="@dimen/margin_padding_30dp"
+                android:layout_marginTop="@dimen/dimens24dp"
+                android:background="@drawable/gradiant_profile_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgUserSetting"
+                android:layout_width="@dimen/dimens100dp"
+                android:layout_height="@dimen/dimens100dp"
+                android:background="@drawable/gradiant_profile_circle"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user"
+                app:layout_constraintBottom_toBottomOf="@+id/viewProfile"
+                app:layout_constraintEnd_toEndOf="@+id/viewProfile"
+                app:layout_constraintStart_toStartOf="@+id/viewProfile"
+                app:layout_constraintTop_toTopOf="@id/viewProfile"
+                app:shapeAppearanceOverlay="@style/CornerCut.Circle" />
+
+            <View
+                android:id="@+id/viewEditEditProfile"
+                android:layout_width="@dimen/dimens30dp"
+                android:layout_height="@dimen/dimens30dp"
+                android:background="@drawable/ic_profile_edit_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/viewProfile"
+                app:layout_constraintEnd_toEndOf="@+id/viewProfile"
+                app:layout_constraintStart_toStartOf="@+id/viewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/viewProfile" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_edit_profile_img"
+                app:layout_constraintBottom_toBottomOf="@+id/viewEditEditProfile"
+                app:layout_constraintEnd_toEndOf="@+id/viewEditEditProfile"
+                app:layout_constraintStart_toStartOf="@+id/viewEditEditProfile"
+                app:layout_constraintTop_toTopOf="@id/viewEditEditProfile" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dimens40dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewProfile">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_background"
+                    android:drawableEnd="@drawable/ic_name_selector"
+                    android:hint="@string/enter_full_name"
+                    android:imeOptions="actionDone"
+                    android:maxLength="@integer/full_name_max_length"
+                    android:text="@={viewModel.name}"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimens16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dimens14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dimens18dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_background"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/phone_selector"
+                    android:focusable="false"
+                    android:maxLength="@integer/mobile_max_length"
+                    android:hint="@string/enterNumber"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimens16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dimens14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dimens18dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_background"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/email_selector"
+                    android:focusable="false"
+                    android:hint="@string/enter_email"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimens16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dimens14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.app.myrickshawparent.ui.view.CustomButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="@dimen/dimens0dp"
+                android:layout_height="@dimen/dimens60dp"
+                android:layout_marginHorizontal="@dimen/dimens24dp"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:layout_marginBottom="@dimen/dimens20dp"
+                android:backgroundTint="@color/yellow"
+                android:textSize="@dimen/dimens16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+                app:layout_constraintVertical_bias="0.918"
+                app:title="@string/save_changes" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

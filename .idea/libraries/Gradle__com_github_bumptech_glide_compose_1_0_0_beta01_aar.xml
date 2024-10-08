@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.bumptech.glide:compose:1.0.0-beta01@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/8.9/transforms/5257fa90baacbc8b6acc9e86b0534f20/transformed/compose-1.0.0-beta01/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.9/transforms/5257fa90baacbc8b6acc9e86b0534f20/transformed/compose-1.0.0-beta01/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/compose/1.0.0-beta01/ab9f60e7835a8a7f498bb2dbb824c7083d4cad24/compose-1.0.0-beta01-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/compose/1.0.0-beta01/ab3c5b4ddc1e103a53b23f0917aa1396ac6f2c9/compose-1.0.0-beta01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

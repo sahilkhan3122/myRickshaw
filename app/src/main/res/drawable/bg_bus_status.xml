@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Set the yellow background color -->
+    <solid android:color="@color/yellow"/>
+
+    <!-- Set the corner radius to 130dp -->
+    <corners android:radius="130dp" />
+
+    <!-- Set the width and height of the shape -->
+    <size
+        android:width="87dp"
+        android:height="32dp" />
+</shape>

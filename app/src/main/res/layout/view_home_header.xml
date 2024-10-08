@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conHomeHeader"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_24dp"
+            android:layout_marginBottom="@dimen/margin_padding_16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitleHomeHeader"
+                style="@style/YellowRegular24"
+                android:layout_width="@dimen/dimens0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_padding_16dp"
+                android:text="@string/hey_parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgViewHomeHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgViewHomeHeader"
+                android:layout_width="@dimen/dimens40dp"
+                android:layout_height="@dimen/dimens50dp"
+                android:src="@drawable/login_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSubTitleHomeHeader"
+                style="@style/BlackBold18"
+                android:layout_width="@dimen/dimens0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="@dimen/margin_padding_16dp"
+                android:text="@string/home_subTitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgViewHomeHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTitleHomeHeader" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtOtherTitleHomeHeader"
+            style="@style/BlackBold24"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_24dp"
+            android:layout_marginBottom="@dimen/margin_padding_16dp"
+            android:text="@string/app_name"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

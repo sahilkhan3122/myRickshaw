@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conDataListChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimens4dp"
+            android:paddingBottom="@dimen/dimens4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/borderYellow"
+                android:layout_width="@dimen/dimens0dp"
+                android:layout_height="@dimen/dimens0dp"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:layout_marginTop="@dimen/dimens11dp"
+                android:layout_marginEnd="@dimen/dimens26dp"
+                android:layout_marginBottom="@dimen/dimens2dp"
+                android:background="@drawable/card_border_yellow"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CornerCut.Circle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens24dp"
+                android:layout_marginTop="@dimen/dimens8dp"
+                android:layout_marginBottom="@dimen/dimens4dp"
+                android:background="@drawable/cardview_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/icImage"
+                    style="@style/CustomShapeableImageView"
+                    android:layout_width="@dimen/dimens66dp"
+                    android:layout_height="@dimen/dimens66dp"
+                    android:layout_marginStart="@dimen/dimens16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUserName"
+                    style="@style/BlackBold16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens18dp"
+                    android:layout_marginTop="@dimen/dimens18dp"
+                    android:layout_marginEnd="@dimen/dimens10dp"
+                    android:gravity="start"
+                    android:text="@string/charlie_smith"
+                    android:textSize="@dimen/dimens14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvSchoolName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icImage"
+                    app:layout_constraintTop_toTopOf="@+id/icImage"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSchoolName"
+                    style="@style/GrayRegular14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding_5dp"
+                    android:layout_marginEnd="@dimen/dimens10dp"
+                    android:gravity="start"
+                    android:text="@string/holsworthy_public_school"
+                    android:textColor="@color/grayDark60"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/tvUserName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvClass"
+                    style="@style/GrayRegular14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding_5dp"
+                    android:layout_marginEnd="@dimen/dimens10dp"
+                    android:layout_marginBottom="@dimen/dimens20dp"
+                    android:gravity="start"
+                    android:text="@string/class_5e"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimens10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/tvSchoolName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSchoolName" />
+
+                <com.app.myrickshawparent.ui.view.CustomButton
+                    android:id="@+id/btnInSchool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimens32dp"
+                    android:layout_marginTop="@dimen/dimens24dp"
+                    android:layout_marginBottom="@dimen/dimens20dp"
+                    android:visibility="gone"
+                    app:button_background="@color/lightYellow"
+                    app:button_image="@drawable/ic_in_school"
+                    app:button_text_color="@color/yellow"
+                    app:button_text_style="@style/ButtonStyleCustom10"
+                    app:is_image="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnTrack"
+                    app:layout_constraintStart_toStartOf="@+id/icImage"
+                    app:layout_constraintTop_toBottomOf="@+id/icImage"
+                    app:title="@string/in_school" />
+
+                <com.app.myrickshawparent.ui.view.CustomButton
+                    android:id="@+id/btnTrack"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimens32dp"
+                    android:layout_marginStart="@dimen/margin_padding_12dp"
+                    android:layout_marginEnd="@dimen/margin_padding_16dp"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    app:button_background="@color/black"
+                    app:button_text_color="@color/white"
+                    app:button_text_style="@style/ButtonStyleCustom10white"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnInSchool"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnInSchool"
+                    app:layout_constraintTop_toTopOf="@+id/btnInSchool"
+                    app:title="@string/track" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewItemListChild"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="@dimen/margin_padding_100dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conDataListChild" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

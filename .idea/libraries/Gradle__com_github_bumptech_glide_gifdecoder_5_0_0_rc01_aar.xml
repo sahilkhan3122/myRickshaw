@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.bumptech.glide:gifdecoder:5.0.0-rc01@aar" external-system-id="GRADLE">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.9/transforms/a4ca0d02f699525a320eb5b1d8c797a5/transformed/gifdecoder-5.0.0-rc01/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/8.9/transforms/a4ca0d02f699525a320eb5b1d8c797a5/transformed/gifdecoder-5.0.0-rc01/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.9/transforms/a4ca0d02f699525a320eb5b1d8c797a5/transformed/gifdecoder-5.0.0-rc01/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/5.0.0-rc01/9062263fbeda0bbe72719d5fca0d8ac4ee8970cb/gifdecoder-5.0.0-rc01-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/5.0.0-rc01/4ec00e1947d718a412c6d141c9e5337c4756bde8/gifdecoder-5.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_eye_white" android:state_focused="true" /> <!-- Focused icon -->
+    <item android:drawable="@drawable/ic_eye_black" /> <!-- Default icon -->
+</selector>

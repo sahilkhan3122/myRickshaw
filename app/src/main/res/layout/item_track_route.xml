@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/lineTop"
+            android:layout_width="1.5dp"
+            android:layout_height="@dimen/dimens10dp"
+            android:background="@drawable/vertical_dashed_line"
+            app:flow_horizontalGap="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/containerLocation"
+            app:layout_constraintEnd_toEndOf="@+id/containerLocation"
+            app:layout_constraintStart_toStartOf="@+id/containerLocation"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerLocation"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="@dimen/dimens24dp"
+            android:layout_marginTop="@dimen/dimens6dp"
+            android:background="@drawable/bg_circle_track"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lineTop">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icTrackImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPickTittle"
+            style="@style/BlackBold16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens24dp"
+            android:layout_marginEnd="@dimen/dimens10dp"
+            android:gravity="start"
+            android:text="@string/home_pick_up"
+            android:textSize="@dimen/dimens14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/containerLocation"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPickDescription"
+            style="@style/GrayMediumOpacity60Gray12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens10dp"
+            android:layout_marginEnd="@dimen/dimens10dp"
+            android:gravity="start"
+            android:text="@string/_255_pitt_st_sydney_nsw_2000"
+            android:textColor="@color/grayDark60"
+            app:layout_constraintBottom_toTopOf="@id/clock1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/containerLocation"
+            app:layout_constraintTop_toBottomOf="@+id/lineTop" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/clock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_5dp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintBottom_toTopOf="@+id/lineLocation"
+            app:layout_constraintEnd_toStartOf="@id/tvTime"
+            app:layout_constraintStart_toStartOf="@+id/tvPickDescription"
+            app:layout_constraintTop_toBottomOf="@+id/tvPickDescription" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icEllipse"
+            android:layout_width="@dimen/dimens8dp"
+            android:layout_height="@dimen/dimens8dp"
+            android:layout_marginTop="@dimen/dimens4dp"
+            android:src="@drawable/ic_ellipse"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/containerLocation"
+            app:layout_constraintStart_toStartOf="@id/containerLocation"
+            app:layout_constraintTop_toBottomOf="@id/containerLocation" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTime"
+            style="@style/GrayRegular14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens4dp"
+            android:layout_marginEnd="@dimen/dimens10dp"
+            android:fontFamily="@font/itc_avant_garade_std_bold"
+            android:gravity="start"
+            android:text="@string/_07_35_am"
+            android:textColor="@color/blackOpacity60"
+            android:textSize="@dimen/dimens10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/clock1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/clock1"
+            app:layout_constraintTop_toTopOf="@+id/clock1" />
+
+
+        <View
+            android:id="@+id/lineLocation"
+            android:layout_width="1.5dp"
+            android:layout_height="@dimen/dimens30dp"
+            android:layout_marginTop="@dimen/dimens6dp"
+            android:background="@drawable/vertical_dashed_line"
+            app:flow_horizontalGap="5dp"
+            app:layout_constraintBottom_toTopOf="@id/viewItemListChild"
+            app:layout_constraintEnd_toEndOf="@id/containerLocation"
+            app:layout_constraintStart_toStartOf="@id/containerLocation"
+            app:layout_constraintTop_toBottomOf="@id/containerLocation" />
+
+        <View
+            android:id="@+id/viewItemListChild"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="@dimen/margin_padding_20dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineLocation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

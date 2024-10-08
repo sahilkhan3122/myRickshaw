@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_padding_20dp"
+            android:background="@drawable/bg_dialog"
+            android:paddingHorizontal="@dimen/dimens15dp"
+            android:paddingVertical="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivCancelOrder"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/ic_richshaw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                style="@style/BlackBold18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_14dp"
+                android:text="@string/open_setting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivCancelOrder" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMessage"
+                style="@style/BlackMd14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_padding_14dp"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <com.app.myrickshawparent.ui.view.CustomButton
+                android:id="@+id/btCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens40dp"
+                android:layout_marginStart="@dimen/dimens12dp"
+                android:layout_marginTop="@dimen/margin_padding_14dp"
+                app:border_width="@dimen/dimens1dp"
+                app:button_background="@color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btOk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage"
+                app:title="@string/ok" />
+
+            <com.app.myrickshawparent.ui.view.CustomButton
+                android:id="@+id/btOk"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens40dp"
+                android:layout_marginStart="@dimen/dimens7dp"
+                android:layout_marginTop="@dimen/margin_padding_14dp"
+                android:layout_marginEnd="@dimen/dimens12dp"
+                app:button_background="@color/yellow"
+                app:button_text_style="@style/ButtonStyleCustom14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btCancel"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage"
+                app:title="@string/cancel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

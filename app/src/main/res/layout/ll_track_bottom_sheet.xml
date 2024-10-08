@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/timerContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/bg_timer_bottom_sheet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/clockImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens10dp"
+                android:layout_marginTop="@dimen/dimens10dp"
+                android:layout_marginBottom="@dimen/dimens10dp"
+                android:src="@drawable/ic_clock_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvMessageTB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMessageTB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens8dp"
+                android:layout_marginEnd="@dimen/dimens10dp"
+                android:fontFamily="@font/itc_avant_garade_std_bold"
+                android:gravity="start"
+                android:text="@string/eta_to_reach_home_12_10_pm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimens10sp"
+                app:layout_constraintBottom_toBottomOf="@id/clockImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clockImg"
+                app:layout_constraintTop_toBottomOf="@id/timerContainer"
+                app:layout_constraintTop_toTopOf="@+id/clockImg"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/subContainer"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="@dimen/margin_padding_329dp"
+            android:layout_marginTop="@dimen/margin_padding_12dp"
+            android:background="@drawable/outer_track_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timerContainer"
+            app:layout_constraintVertical_bias="0.0">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="@dimen/dimens47dp"
+                android:layout_height="@dimen/dimens4dp"
+                android:layout_marginTop="@dimen/dimens10dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBottomSheet"
+                android:layout_width="@dimen/dimens0dp"
+                android:layout_height="@dimen/dimens0dp"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_track_route" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
