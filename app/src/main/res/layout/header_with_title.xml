@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvArrow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimens24dp"
+            android:layout_marginTop="@dimen/dimens32dp"
+            android:layout_marginBottom="@dimen/dimens24dp"
+            app:cardBackgroundColor="@color/whiteGray60"
+            app:cardCornerRadius="@dimen/dimens25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/transparent"
+            app:strokeWidth="@dimen/dimens0dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_left_arrow" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTittle"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens18dp"
+            android:fontFamily="@font/itc_avant_garade_std_demi"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimens18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mcvArrow"
+            app:layout_constraintEnd_toStartOf="@id/btnInSchool"
+            app:layout_constraintStart_toEndOf="@id/mcvArrow"
+            app:layout_constraintTop_toTopOf="@id/mcvArrow"
+            tools:text="@string/tittle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnInSchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimens24dp"
+            android:background="@drawable/bg_bus_status"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTittle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTittle"
+            app:layout_constraintTop_toTopOf="@+id/tvTittle">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView"
+                android:layout_width="@dimen/dimens18dp"
+                android:layout_height="@dimen/dimens18dp"
+                android:layout_marginVertical="@dimen/dimens7dp"
+                android:layout_marginStart="@dimen/dimens12dp"
+                android:src="@drawable/in_school_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvStatus"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/btnInSchool"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/black" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens10sp"
+                android:layout_marginEnd="@dimen/dimens12dp"
+                android:fontFamily="@font/itc_avant_garade_std_bold"
+                android:text="@string/in_a_bus"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimens10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                app:layout_constraintTop_toTopOf="@id/shapeableImageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

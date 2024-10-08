@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869549775982",
+    "project_id": "myrickshaw-school",
+    "storage_bucket": "myrickshaw-school.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869549775982:android:0f099489ca3fcd33c39a7f",
+        "android_client_info": {
+          "package_name": "com.app.myrickshawparent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_B35_fEBto3vCJbTRepnX5epb25mIeyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/conMySnackBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewMySnackBar"
+            style="@style/SnakeBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="10dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_fail_snackbar"
+            android:tooltipText="@string/app_name" />
+
+    </RelativeLayout>
+
+</layout>
